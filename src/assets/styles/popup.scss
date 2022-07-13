@@ -1,0 +1,69 @@
+.sideform.sideform-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sideform {
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  visibility: hidden;
+  opacity: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 0 20px;
+
+  @include to(1024px) {
+    height: 100%;
+    min-height: -webkit-fill-available;
+  }
+
+  @include to(575px) {
+    padding: 0 0 20px;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    li {
+      background: $wc;
+      border-radius: 10px;
+      padding: 18px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 6px;
+      color: $brown;
+      max-width: 332px;
+      a {
+        font-family: 'Inter';
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 100%;
+        text-transform: none;
+        color: $brown;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .cancel {
+      background: #B48D46;
+      color: $wc;
+    }
+  }
+}
+

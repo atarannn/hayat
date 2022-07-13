@@ -1,0 +1,36 @@
+extends ../layout/main
+block variable
+	-
+		var title_page = '404'
+		var id_page = 'id-page-404'
+		var class_page = 'class-page-404'
+
+block meta
+	title= title_page
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(defer src='./assets/scripts/vendors.bundle.js')
+	script(defer src='./assets/scripts/index.bundle.js')
+	script(defer src='./assets/scripts/libs.js')
+	script(src='./assets/scripts/index.js')
+	script(defer src='./assets/scripts/header.js')
+	script(defer src='./assets/scripts/loader.js')
+
+block content
+	section(class="page404-wrap")
+		.row
+			.left-404-img
+				img(src="assets/images/404.jpg" alt="img")
+			.right-404-text
+				.title-404 404
+				.text-404 Страница не найдена. Неправильно набранный адрес или такой страницы не существует.
+				a(href="#").btn-style
+					span На главную
+
+
+
+block header
+	include ../includes/header.pug
+

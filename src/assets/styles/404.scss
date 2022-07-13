@@ -1,0 +1,47 @@
+.page404-wrap {
+  height: 100vh;
+  .row {
+    height: 100%;
+  }
+}
+
+.left-404-img, .right-404-text {
+  width: 50%;
+  height: 100%;
+}
+
+.left-404-img {
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.right-404-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-404 {
+  font-family: 'Cormorat';
+  font-size: var(--title-font);
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: none;
+  text-align: center;
+  color: $bc;
+}
+
+.text-404 {
+  font-family: 'Inter';
+  font-size: var(--font18);
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: none;
+  color: $brown;
+  text-align: center;
+  margin: 25px 0;
+  width: 65%;
+}

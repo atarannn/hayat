@@ -1,0 +1,34 @@
+.menu-wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  background: $wc;
+  margin-top: var(--header-h);
+  padding: 30px var(--fields120);
+  border-bottom: 1px solid #B48D46;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+  }
+  .nav-mobile {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    li {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        font-size: 26px;
+      }
+    }
+  }
+}
