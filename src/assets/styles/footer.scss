@@ -4,6 +4,10 @@ footer {
   @include to(1600px) {
     padding: 80px var(--fields216) 0;
   }
+  @include to(640px) {
+    padding: 60px var(--fields216) 0;
+    position: relative;
+  }
   .footer-form {
     width: calc(100%/3 - 120px);
     @include to(1600px) {
@@ -13,6 +17,11 @@ footer {
       width: 50%;
       padding-right: 10%;
       order: 1;
+    }
+    @include to(640px) {
+      width: 70%;
+      margin: 0 auto;
+      padding-right: 0;
     }
     .form-title {
       font-family: 'Cormorat';
@@ -49,6 +58,9 @@ footer {
   .footer-main {
     justify-content: space-between;
     align-items: flex-start;
+    @include to(640px) {
+      flex-direction: column;
+    }
   }
   .footer-main-left, .footer-main-right {
     width: calc(100%/3 - 80px);
@@ -96,6 +108,9 @@ footer {
     @include to(1600px) {
       width: 60%;
     }
+    @include to(640px) {
+      width: 100%;
+    }
   }
   .footer-table {
     margin-top:  var(--header-ofset30);
@@ -107,6 +122,9 @@ footer {
     @include to(1024px) {
       margin-top: 80px;
     }
+    @include to(640px) {
+      margin-top: 60px;
+    }
     &-text {
       font-family: 'Inter';
       font-size: 12px;
@@ -114,6 +132,9 @@ footer {
       line-height: 150%;
       text-transform: none;
       color: $dark-gray;
+      @include to(640px) {
+        width: 50%;
+      }
     }
     .smarto {
       height: 71px;
@@ -169,6 +190,11 @@ footer {
       margin-bottom: 50px;
     }
   }
+  @include to(640px) {
+    width: 100%;
+    margin-top: 60px;
+    flex-direction: row;
+  }
 }
 
 .mobile-pageup {
@@ -176,5 +202,10 @@ footer {
   order: 3;
   @include to(1024px) {
     display: flex;
+  }
+  @include to(640px) {
+    position: absolute;
+    right: var(--fields120);
+    top: 60px;
   }
 }

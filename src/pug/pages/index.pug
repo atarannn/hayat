@@ -90,19 +90,19 @@ block content
   section.section-1.column
     img(src="assets/images/logo.svg" alt="img").logo
     .cormorat-36.section-1-text
-      span.italic жилой комплекс
+      span.italic жилой комплекc
       span.normal  с отельной инфраструктурой
       span.italic  в центре
       span.italic  Алании
   section.section-2
     img(src="assets/images/renders/1.jpg" alt="img")
-  section.section-3.section-top-offset.first-info-wrapper
+  section.section-3.section-top-offset.first-info-wrapper#about
     .col-50.description-left
       .title Hayat Dream Homes
       .cormorat-36.first-info-text
         span.normal  комфортабельный уютный
-        span.italic   комплекс
-        span.normal  , в котором есть все необходимое
+        span.italic   комплекс,
+        span.normal   в котором есть все необходимое
         span.italic   для отдыха.
       .text Из больших окон квартир и балконов будет открываться замечательный вид на море, горы и город. Вся территория комплекса будет украшена красивым зеленым газоном и декоративными деревьями.
     .col-50.img-right
@@ -130,12 +130,27 @@ block content
             .row.slide-text
               span.num=i.num
               span.text=i.text
+      .bottom-swiper-nav.mob
+        .swiper-button-prev(data-prev)
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle r="24.5" transform="matrix(-1 0 0 1 25 25)" stroke="#BF9850"/>
+          <path d="M27.2576 20L27.5 20.2149L23.9974 25.4178L27.5 30.6184L27.2576 30.8333L21.4815 25.5026L21.4815 25.2877L27.2576 20Z" fill="black"/>
+          </svg>
+        span.first-column__slide-num
+          span.first-column__curr-slide(data-current)
+          span.first-column__divider /
+          span.first-column__all-slides(data-total)
+        .swiper-button-next(data-next)
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="25" cy="25" r="24.5" stroke="#BF9850"/>
+          <path d="M22.7424 20L22.5 20.2149L26.0026 25.4178L22.5 30.6184L22.7424 30.8333L28.5185 25.5026L28.5185 25.2877L22.7424 20Z" fill="black"/>
+          </svg>
       .moving-arrow
         <svg class="arrow-style" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="75" cy="75" r="74.5" stroke="white"/>
           <path d="M70.4027 66L70 66.3571L75.8197 75.0019L70 83.6429L70.4027 84L80 75.1429L80 74.7857L70.4027 66Z" fill="white"/>
         </svg>
-  section.section-6.section-top-offset.first-info-wrapper
+  section.section-6.section-top-offset.first-info-wrapper#sale
     .col-50.description-left
       .description-left-top
         .title Этапы сдачи проекта:
@@ -162,19 +177,49 @@ block content
             .row.slide-text
               span.num=i.num
               span.text=i.text
+      .bottom-swiper-nav.mob
+        .swiper-button-prev(data-prev-2)
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle r="24.5" transform="matrix(-1 0 0 1 25 25)" stroke="#BF9850"/>
+          <path d="M27.2576 20L27.5 20.2149L23.9974 25.4178L27.5 30.6184L27.2576 30.8333L21.4815 25.5026L21.4815 25.2877L27.2576 20Z" fill="black"/>
+          </svg>
+        span.first-column__slide-num
+          span.first-column__curr-slide(data-current-2)
+          span.first-column__divider /
+          span.first-column__all-slides(data-total-2)
+        .swiper-button-next(data-next-2)
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="25" cy="25" r="24.5" stroke="#BF9850"/>
+          <path d="M22.7424 20L22.5 20.2149L26.0026 25.4178L22.5 30.6184L22.7424 30.8333L28.5185 25.5026L28.5185 25.2877L22.7424 20Z" fill="black"/>
+          </svg>
       .moving-arrow2
         <svg class="arrow-style2" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="75" cy="75" r="74.5" stroke="white"/>
           <path d="M70.4027 66L70 66.3571L75.8197 75.0019L70 83.6429L70.4027 84L80 75.1429L80 74.7857L70.4027 66Z" fill="white"/>
         </svg>
 
-  section.section-8.section-top-offset
+  section.section-8.section-top-offset#gallery
     .title5.left-offset.bottom-offset Галерея
     .main-swiper3
       .swiper-wrapper
         each i in slider3
           .swiper-slide
             +img(i.img)
+      .bottom-swiper-nav.mob
+        .swiper-button-prev(data-prev-3)
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle r="24.5" transform="matrix(-1 0 0 1 25 25)" stroke="#BF9850"/>
+          <path d="M27.2576 20L27.5 20.2149L23.9974 25.4178L27.5 30.6184L27.2576 30.8333L21.4815 25.5026L21.4815 25.2877L27.2576 20Z" fill="black"/>
+          </svg>
+        span.first-column__slide-num
+          span.first-column__curr-slide(data-current-3)
+          span.first-column__divider /
+          span.first-column__all-slides(data-total-3)
+        .swiper-button-next(data-next-3)
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="25" cy="25" r="24.5" stroke="#BF9850"/>
+          <path d="M22.7424 20L22.5 20.2149L26.0026 25.4178L22.5 30.6184L22.7424 30.8333L28.5185 25.5026L28.5185 25.2877L22.7424 20Z" fill="black"/>
+          </svg>
       .moving-arrow3
         <svg class="arrow-style2" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="75" cy="75" r="74.5" stroke="white"/>
@@ -193,7 +238,7 @@ block content
       .text Из больших окон квартир и балконов будет открываться замечательный вид на море, горы и город. Вся территория комплекса будет украшена красивым зеленым газоном и декоративными деревьями.
       a(href="").btn-style2
         span Выбрать квартиру
-  section.section-10.section-top-offset
+  section.section-10.section-top-offset#contacts
     .section-10-top
       .title5 Контакты
       .contacts-btn(data-call-form)

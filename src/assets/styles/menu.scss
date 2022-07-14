@@ -22,12 +22,11 @@
     align-items: flex-end;
     justify-content: space-between;
     li {
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0;
-      }
       a {
         font-size: 26px;
+        @include to(640px) {
+          font-size: 14px;
+        }
       }
     }
   }

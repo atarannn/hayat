@@ -2,18 +2,30 @@
   height: 100vh;
   .row {
     height: 100%;
+    @include to(1024px) {
+      flex-direction: column-reverse;
+    }
   }
 }
 
 .left-404-img, .right-404-text {
   width: 50%;
   height: 100%;
+  @include to(1024px) {
+    width: 100%;
+  }
 }
 
 .left-404-img {
   img {
     height: 100%;
     object-fit: cover;
+  }
+  @include to(1024px) {
+    height: 40vh;
+  }
+  @include to(640px) {
+    display: none;
   }
 }
 
@@ -22,6 +34,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include to(1024px) {
+    height: 60vh;
+  }
+  @include to(640px) {
+    height: 100vh;
+  }
 }
 
 .title-404 {
@@ -32,6 +50,12 @@
   text-transform: none;
   text-align: center;
   color: $bc;
+  @include to(1024px) {
+    font-size: 150px;
+  }
+  @include to(640px) {
+    font-size: 120px;
+  }
 }
 
 .text-404 {

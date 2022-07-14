@@ -210,31 +210,43 @@ function sideSwitchArrow3(swiper, arrowArgs, conArgs) {
 }
 const slider = new Swiper('.main-swiper', {
   loop: false,
+  watchSlidesVisibility: true,
+  preloadImages: false,
+  lazy: true,
   speed: 1000,
-  slidesPerView: 1.7,
   simulateTouch: false,
   spaceBetween: 70,
   navigation: {
     nextEl: document.querySelector('[data-next]'),
     prevEl: document.querySelector('[data-prev]'),
   },
+  on: {
+    init: (e) => {
+      document.querySelector('[data-total]').innerHTML = document.querySelectorAll('.main-swiper .swiper-slide').length;
+      document.querySelector('[data-current]').innerHTML = e.activeIndex + 1;
+    },
+  },
   breakpoints: {
-    1600: {
-      slidesPerView: 1.7,
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 70,
+    },
+    640: {
+      slidesPerView: 1,
       spaceBetween: 70,
     },
     1024: {
       slidesPerView: 1.8,
       spaceBetween: 50,
     },
-    575: {
-      slidesPerView: 1.1,
-      spaceBetween: 30,
-    },
-    320: {
-      spaceBetween: 30,
+    1600: {
+      slidesPerView: 1.7,
+      spaceBetween: 70,
     },
   },
+});
+slider.on('activeIndexChange', (obj) => {
+  document.querySelector('[data-current]').innerHTML = obj.realIndex + 1;
 });
 const slider2 = new Swiper('.main-swiper2', {
   loop: false,
@@ -243,8 +255,14 @@ const slider2 = new Swiper('.main-swiper2', {
   simulateTouch: false,
   spaceBetween: 70,
   navigation: {
-    nextEl: document.querySelector('[data-next]'),
-    prevEl: document.querySelector('[data-prev]'),
+    nextEl: document.querySelector('[data-next-2]'),
+    prevEl: document.querySelector('[data-prev-2]'),
+  },
+  on: {
+    init: (e) => {
+      document.querySelector('[data-total-2]').innerHTML = document.querySelectorAll('.main-swiper2 .swiper-slide').length;
+      document.querySelector('[data-current-2]').innerHTML = e.activeIndex + 1;
+    },
   },
   breakpoints: {
     1600: {
@@ -255,14 +273,18 @@ const slider2 = new Swiper('.main-swiper2', {
       slidesPerView: 1.8,
       spaceBetween: 50,
     },
-    575: {
-      slidesPerView: 1.1,
-      spaceBetween: 30,
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 70,
     },
     320: {
+      slidesPerView: 1,
       spaceBetween: 30,
     },
   },
+});
+slider2.on('activeIndexChange', (obj) => {
+  document.querySelector('[data-current-2]').innerHTML = obj.realIndex + 1;
 });
 const slider3 = new Swiper('.main-swiper3', {
   loop: false,
@@ -271,8 +293,14 @@ const slider3 = new Swiper('.main-swiper3', {
   simulateTouch: false,
   spaceBetween: 70,
   navigation: {
-    nextEl: document.querySelector('[data-next]'),
-    prevEl: document.querySelector('[data-prev]'),
+    nextEl: document.querySelector('[data-next-3]'),
+    prevEl: document.querySelector('[data-prev-3]'),
+  },
+  on: {
+    init: (e) => {
+      document.querySelector('[data-total-3]').innerHTML = document.querySelectorAll('.main-swiper3 .swiper-slide').length;
+      document.querySelector('[data-current-3]').innerHTML = e.activeIndex + 1;
+    },
   },
   breakpoints: {
     1600: {
@@ -283,16 +311,19 @@ const slider3 = new Swiper('.main-swiper3', {
       slidesPerView: 1.6,
       spaceBetween: 50,
     },
-    575: {
-      slidesPerView: 1.1,
-      spaceBetween: 30,
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 70,
     },
     320: {
+      slidesPerView: 1,
       spaceBetween: 30,
     },
   },
 });
-
+slider3.on('activeIndexChange', (obj) => {
+  document.querySelector('[data-current-3]').innerHTML = obj.realIndex + 1;
+});
 sideSwitchArrow(
   slider,
   document.querySelector('.moving-arrow'),

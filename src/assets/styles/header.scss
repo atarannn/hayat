@@ -26,6 +26,19 @@ header {
   left: 0;
   top: 0;
   z-index: 10;
+  @include to(640px) {
+    .btn-style2 {
+      display: none;
+    }
+  }
+  .btn3d-mob {
+    display: none;
+    height: 40px;
+    width: 40px;
+    @include to(640px) {
+      display: flex;
+    }
+  }
 }
 
 .header-left {
@@ -124,12 +137,28 @@ header {
 .logo-mob {
   height: 40px;
   width: 91px;
+  @include to(640px) {
+    width: 68.25px;
+    height: 30px;
+  }
 }
 
 .sideform-call-mob {
   width: 50px;
   height: 50px;
   margin-right: var(--header-ofset50);
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+  @include to(640px) {
+    width: 40px;
+    height: 40px;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 
 .menu-mob {
@@ -139,6 +168,10 @@ header {
   border-radius: 100%;
   position: relative;
   margin-left: var(--header-ofset50);
+  @include to(640px) {
+    width: 40px;
+    height: 40px;
+  }
   .span-wrapper {
     position: absolute;
     left: 50%;
@@ -151,11 +184,29 @@ header {
     align-items: center;
     justify-content: center;
     gap: 6px;
+    @include to(640px) {
+      gap: 4px;
+    }
+    &.active {
+      gap: 0;
+      span {
+        transition: all 0.1s ease-in-out;
+        transform: rotate(45deg);
+        &:last-child {
+          transform: rotate(-45deg);
+          margin-top: -1px;
+        }
+      }
+    }
     span {
       content: '';
       width: 15px;
       height: 1px;
       background: $bc;
+      transition: all 0.1s ease-in-out;
+      @include to(640px) {
+        width: 11px;
+      }
     }
   }
 }

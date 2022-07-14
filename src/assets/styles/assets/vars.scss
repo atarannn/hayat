@@ -95,3 +95,23 @@ $footer-background: #1A1E21;
     --font32: 24px;
   }
 }
+
+
+@media screen and (max-width: 640px){
+  :root {
+    --header-h: 60px;
+    --header-ofset50: 15px;
+
+    --fields120: 15px;
+    --fields216: 15px;
+
+    --ofset210: 60px;
+
+    --title-font: 64px;
+    --title-font3: 40px;
+    --title-font4: 24px;
+    --font32: 18px;
+    --font36: 24px;
+
+  }
+}

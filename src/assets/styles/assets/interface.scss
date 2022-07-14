@@ -104,15 +104,8 @@
 	color: $bc;
 	font-style: italic;
 	position: relative;
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background: $bc;
-	}
+	border-bottom:1px solid $bc;
+	padding-bottom:1px;
 }
 
 .title {
@@ -195,13 +188,22 @@
 			padding-left: 0;
 			margin-bottom: 40px;
 		}
+		@include to(640px) {
+			margin-bottom: 30px;
+		}
 		.title {
 			margin-bottom: var(--ofset30);
 			width: 65%;
+			@include to(640px) {
+				width: 80%;
+			}
 		}
 		.first-info-text {
 			margin-bottom: var(--ofset30);
 			width: 65%;
+			@include to(640px) {
+				width: 100%;
+			}
 			&.normal, &.italic {
 				font-size: var(--font36);
 			}
@@ -214,6 +216,9 @@
 		}
 		.text {
 			width: 65%;
+			@include to(640px) {
+				width: 100%;
+			}
 		}
 	}
 	.img-right {
@@ -223,6 +228,9 @@
 			@include to(1024px) {
 				height: 402px;
 				object-fit: cover;
+			}
+			@include to(640px) {
+				height: 210px;
 			}
 		}
 		.title2 {
@@ -237,6 +245,9 @@
 				bottom: -52px;
 				left: 0;
 			}
+			@include to(640px) {
+				bottom: -37px;
+			}
 		}
 	}
 	.title4 {
@@ -246,6 +257,9 @@
 		transform: translateY(-50%) rotate(-90deg);
 		@include to(1600px) {
 			left: -9%;
+		}
+		@include to(1024px) {
+			display: none;
 		}
 	}
 }
@@ -277,12 +291,18 @@
 		.first-info-text {
 			margin-bottom: var(--ofset30);
 			width: 70%;
+			@include to(640px) {
+				width: 100%;
+			}
 			&.normal, &.italic {
 				font-size: var(--font36);
 			}
 		}
 		.text {
 			width: 70%;
+			@include to(640px) {
+				width: 100%;
+			}
 		}
 	}
 	.img-left {
@@ -291,6 +311,9 @@
 			@include to(1024px) {
 				height: 402px;
 				object-fit: cover;
+			}
+			@include to(640px) {
+				height: 210px;
 			}
 		}
 	}
