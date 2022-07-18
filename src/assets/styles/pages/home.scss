@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   @include to(1024px) {
-    height: 70vh;
+    height: 60vh;
   }
   .logo {
     width: 482px;
@@ -39,7 +39,7 @@
   position: relative;
   height: 100vh;
   @include to(1024px) {
-    height: 30vh;
+    height: 40vh;
   }
   img {
     height: 100%;
@@ -215,6 +215,14 @@
       text-align: center;
       width: 50%;
       color: #D3A756;
+      transition: all .3s ease-in-out;
+      @include from(1023px) {
+        &:hover {
+          cursor: pointer;
+          color: #A47A2C;
+          transition: all .3s ease-in-out;
+        }
+      }
       @include to(1600px) {
         font-size: 100px;
       }
@@ -254,15 +262,32 @@
         width: 80%;
         margin-bottom: var(--ofset50);
       }
+      .text {
+        transition: all .3s ease-in-out;
+        @include from(1023px) {
+          &:hover {
+            transition: all .3s ease-in-out;
+            color: #D3A756;
+          }
+        }
+      }
       .title3 {
         margin-bottom: var(--ofset20);
       }
       .table {
         margin-top: var(--ofset20);
+        pointer-events: none;
       }
     }
     .tell-btn, .mail-btn {
       margin-bottom: var(--ofset50);
+      transition: all .3s ease-in-out;
+      @include from(1023px) {
+        &:hover {
+          transition: all .3s ease-in-out;
+          color: #D3A756;
+        }
+      }
     }
     .social-network  {
       a {
@@ -273,6 +298,16 @@
         svg {
           height: 25px;
           width: 25px;
+          stroke: $brown;
+          transition: all .3s ease-in-out;
+        }
+        @include from(1023px) {
+          &:hover {
+            svg {
+              stroke: #D3A756;
+              transition: all .3s ease-in-out;
+            }
+          }
         }
       }
     }

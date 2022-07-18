@@ -341,3 +341,47 @@ sideSwitchArrow3(
   document.querySelector('.moving-arrow3'),
   document.querySelector('.main-swiper3'),
 );
+
+const parallaxAnim = document.querySelectorAll('.section-2 img, .img-right img, .img-left img');
+parallaxAnim.forEach(section => {
+  const wrap = document.createElement('div');
+  wrap.style.overflow = 'hidden';
+  wrap.style.height = '100%';
+  section.parentElement.prepend(wrap);
+  gsap.set(section, { willChange: 'transform', scale: 1.15 });
+  wrap.prepend(section);
+  if (document.documentElement.clientWidth > 1023) {
+    const tl = gsap.timeline({
+      paused: true,
+      scrollTrigger: {
+        triggerHook: 1,
+        trigger: wrap,
+        scrub: true,
+        // start: '-100% top',
+        // end: '100% bottom',
+      },
+    });
+    tl.fromTo(
+        section,
+        { y: -100},
+        { y: 100, duration: 0.2},
+    );
+  }
+  if (document.documentElement.clientWidth < 1024) {
+    const tl = gsap.timeline({
+      paused: true,
+      scrollTrigger: {
+        triggerHook: 1,
+        trigger: wrap,
+        scrub: true,
+        // start: '-100% top',
+        // end: '100% bottom',
+      },
+    });
+    tl.fromTo(
+        section,
+        { y: -50},
+        { y: 50, duration: 0.2},
+    );
+  }
+});

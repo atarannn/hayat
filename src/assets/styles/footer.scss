@@ -50,7 +50,7 @@ footer {
       height: 60px;
       border-bottom: 1px solid $brown;
     }
-    .btn-style {
+    .btn-style3 {
       color: $wc;
       margin-top: 70px;
     }
@@ -80,6 +80,13 @@ footer {
     line-height: 150%;
     text-transform: none;
     color: $wc;
+    transition: all .3s ease-in-out;
+    @include from(1023px) {
+      &:hover {
+        transition: all .3s ease-in-out;
+        color: $brown;
+      }
+    }
     @include to(1600px) {
       font-size: var(--btn-font);
     }
@@ -98,6 +105,18 @@ footer {
       &:last-child {
         margin-right: 0;
       }
+      svg {
+        stroke: $wc;
+        transition: all .3s ease-in-out;
+      }
+      @include from(1023px) {
+        &:hover {
+          svg {
+            stroke: $brown;
+            transition: all .3s ease-in-out;
+          }
+        }
+      }
     }
   }
   .tell-btn, .mail-btn {
@@ -114,6 +133,7 @@ footer {
   }
   .footer-table {
     margin-top:  var(--header-ofset30);
+    pointer-events: none;
   }
   .footer-bottom {
     margin-top: 95px;
@@ -154,12 +174,16 @@ footer {
   border: 1px solid #BF9850;
   justify-self: flex-end;
   position: relative;
-  background: transparent;
+  background: #BF9850;
   @include to(1600px) {
     height: 50px;
     width: 50px;
   }
+  @include to(1024px) {
+    background: $footer-background;
+  }
   svg {
+    transition: all .3s ease-in-out;
     height: 13px;
     width: 16px;
     position: absolute;
@@ -167,11 +191,6 @@ footer {
     top: 50%;
     transform: translate(-50%, -50%);
     fill: #BF9850;
-  }
-  @include from(1023px) {
-    &:hover {
-      cursor: pointer;
-    }
   }
 }
 

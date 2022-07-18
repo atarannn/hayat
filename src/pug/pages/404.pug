@@ -15,8 +15,9 @@ block scripts
 	script(defer src='./assets/scripts/index.bundle.js')
 	script(defer src='./assets/scripts/libs.js')
 	script(src='./assets/scripts/index.js')
-	script(defer src='./assets/scripts/header.js')
+	script(defer src='./assets/scripts/form.js')
 	script(defer src='./assets/scripts/loader.js')
+	script(defer src='./assets/scripts/animation.js')
 
 block content
 	section(class="page404-wrap")
@@ -27,10 +28,11 @@ block content
 				.title-404 404
 				.text-404 Страница не найдена. Неправильно набранный адрес или такой страницы не существует.
 				a(href="#").btn-style
-					span На главную
+					span
+						span На главную
 
 
 
 block header
-	include ../includes/header.pug
+	include ../includes/header-404.pug
 
