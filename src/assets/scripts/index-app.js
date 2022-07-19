@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 global.axios = axios;
 
 const form = [
-  '[data-form]',
+  '[data-contact]',
 ];
 
 const footerForm = [

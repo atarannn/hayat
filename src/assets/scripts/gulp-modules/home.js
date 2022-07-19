@@ -385,3 +385,19 @@ parallaxAnim.forEach(section => {
     );
   }
 });
+
+document.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const header = document.querySelector('header');
+  const logo = document.querySelector('.logo');
+  if(document.documentElement.clientWidth > 1024) {
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+      document.querySelector('.logo').classList.add('not-on-top');
+    } else {
+      document.querySelector('.logo').classList.remove('not-on-top');
+    }
+  }
+}

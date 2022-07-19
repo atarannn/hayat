@@ -112,3 +112,5 @@ function formInit() {
 function init() {
     formInit();
 }
+
+window.addEventListener('DOMContentLoaded', init);

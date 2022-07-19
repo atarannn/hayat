@@ -3,28 +3,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   @include to(1024px) {
     height: 60vh;
-  }
-  .logo {
-    width: 482px;
-    height: 212px;
-    z-index: 11;
-    @include to(1600px) {
-      width: 338px;
-      height: 149px;
-    }
-    @include to(640px) {
-      width: 216px;
-      height: 95px;
-    }
   }
   &-text {
     text-align: center;
     max-width: 482px;
-    margin-top: var(--ofset40);
+    margin-top: 15%;
     @include to(1600px) {
       max-width: 338px;
+    }
+    @include to(1024px) {
+      margin-top: var(--ofset40);
     }
     @include to(640px) {
       max-width: 60%;
@@ -331,4 +322,34 @@
 .mobile-column {
   display: flex;
   flex-direction: column;
+}
+
+.logo {
+  width: 482px;
+  height: 212px;
+  z-index: 11;
+  transition: all 0.7s ease-in-out;
+  position: fixed;
+  top: 27%;
+  left: 50%;
+  transform: translateX(-50%);
+  @include to(1600px) {
+    width: 338px;
+    height: 149px;
+  }
+  @include to(1024px) {
+    position: static;
+    transform: none;
+  }
+  @include to(640px) {
+    width: 216px;
+    height: 95px;
+  }
+  &.not-on-top {
+    position: fixed;
+    top: 2%;
+    height: 50px;
+    width: 113.68px;
+    transition: all 0.4s ease-in-out;
+  }
 }
