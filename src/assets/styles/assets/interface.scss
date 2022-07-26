@@ -53,6 +53,7 @@
 	color: $bc;
 	overflow: hidden;
 	position: relative;
+	transform: translateZ(0);
 	span {
 		text-align: center;
 		position: relative;
@@ -78,6 +79,7 @@
 	@include from(1023px) {
 		&:hover {
 			cursor: pointer;
+			transform: translateZ(0);
 			> span {
 				> span {
 					color: $wc;
@@ -109,6 +111,7 @@
 	color: $wc;
 	overflow: hidden;
 	position: relative;
+	transform: translateZ(0);
 	span {
 		text-align: center;
 		position: relative;
@@ -132,6 +135,7 @@
 		height: 100%;
 	}
 	@include from(1023px) {
+		transform: translateZ(0);
 		&:hover {
 			cursor: pointer;
 			> span {
@@ -165,6 +169,7 @@
 	color: $bc;
 	overflow: hidden;
 	position: relative;
+	transform: translateZ(0);
 	span {
 		text-align: center;
 		position: relative;
@@ -188,6 +193,7 @@
 		height: 100%;
 	}
 	@include from(1023px) {
+		transform: translateZ(0);
 		&:hover {
 			cursor: pointer;
 			> span {
@@ -222,6 +228,7 @@
 	color: $bc;
 	overflow: hidden;
 	position: relative;
+	transform: translateZ(0);
 	span {
 		text-align: center;
 		position: relative;
@@ -245,6 +252,7 @@
 		height: 100%;
 	}
 	@include from(1023px) {
+		transform: translateZ(0);
 		&:hover {
 			cursor: pointer;
 			> span {

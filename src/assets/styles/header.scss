@@ -62,7 +62,7 @@ header {
         @include from(1023px) {
           &::before {
             height: 1px;
-            top: 100%;
+            top: 95%;
             transform-origin: 100% 50%;
             transform: scale3d(0, 1, 1);
             transition: transform 0.5s cubic-bezier(0.5, 0.5, 0.3, 1);
@@ -90,13 +90,14 @@ header {
             display: inline-block;
             transition: transform 0.5s cubic-bezier(0.5, 0.5, 0.3, 1);
           }
-          &:hover {
+          &:hover{
+            transform: translateZ(0) translateZ(0);
             &:before {
               transform-origin: 0% 50%;
               transform: scale3d(1, 1, 1);
             }
             &:after {
-              transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0) translateZ(0);
             }
             span {
               transform: translate3d(-150%, 0, 0);
@@ -146,9 +147,9 @@ header {
     display: block;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 0;
     transition: all .3s ease-in-out;
-    transform: translateY(-50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   li {
     list-style: none;
@@ -186,7 +187,7 @@ header {
     }
 
     &:after{
-      transform: translateY(-50%) rotate(180deg);
+      transform: rotate(180deg);
       transition: all .3s ease-in-out;
     }
   }
