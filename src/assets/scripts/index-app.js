@@ -102,7 +102,22 @@ footerForm.forEach((form) => {
       elements: {
         $form,
         showSuccessMessage: false,
-        successAction: () => { window.location.href = 'message'; },
+        successAction: () => {
+          function callThanksPopup(callSelector, contentToOpenSelector) {
+            const submitBtn = document.querySelectorAll('[data-btn-submit]');
+            const form = document.querySelector('[data-footer-thanks]');
+            const close = document.querySelectorAll('[data-close-footer-thanks]');
+            submitBtn.forEach(elem => {
+              form.classList.add('active');
+            });
+            close.forEach(el => {
+              el.addEventListener('click', () => {
+                form.classList.remove('active');
+              })
+            })
+          }
+          callThanksPopup();
+          },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {
           name: {
