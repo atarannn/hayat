@@ -77,7 +77,7 @@ form.forEach((form) => {
             rule: yup
               .string()
               .required(i18next.t('required'))
-              .min(16, i18next.t('field_too_short', { cnt: 19 - 7 })),
+              .min(17, i18next.t('field_too_short', { cnt: 19 - 7 })),
             defaultMessage: i18next.t('phone'),
             valid: false,
             error: [],
@@ -133,7 +133,7 @@ footerForm.forEach((form) => {
             rule: yup
               .string()
               .required(i18next.t('required'))
-              .min(16, i18next.t('field_too_short', { cnt: 19 - 7 })),
+              .min(17, i18next.t('field_too_short', { cnt: 19 - 7 })),
 
             defaultMessage: i18next.t('phone'),
             valid: false,
