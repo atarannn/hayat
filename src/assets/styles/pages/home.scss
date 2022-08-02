@@ -353,3 +353,11 @@
     transition: all 0.4s ease-in-out;
   }
 }
+
+.render-height {
+  height: 80vh;
+  object-fit: cover;
+  @include to(1024px) {
+    height: auto;
+  }
+}
