@@ -95,8 +95,9 @@
     }
   }
   .swiper-slide {
-    img {
+    img, video {
       height: 600px;
+      width: 100%;
       object-fit: cover;
       @include to(1600px) {
         height: 428px;
