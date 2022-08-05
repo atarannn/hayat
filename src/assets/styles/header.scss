@@ -52,24 +52,25 @@ header {
     li {
       margin-right: var(--header-ofset30);
       overflow: hidden;
+      height: 25px;
       &:last-child {
         margin-right: 0;
       }
       a {
         position: relative;
         overflow: hidden;
-        padding-bottom: 2px;
+        padding-bottom: 5px;
         @include from(1023px) {
           &::before {
             height: 1px;
-            top: 95%;
+            top: 100%;
             transform-origin: 100% 50%;
             transform: scale3d(0, 1, 1);
             transition: transform 0.5s cubic-bezier(0.5, 0.5, 0.3, 1);
             content: '';
             position: absolute;
             width: 100%;
-            background: $brown;
+            background: #B48D46;
             left: 0;
             pointer-events: none;
           }
