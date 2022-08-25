@@ -21,9 +21,17 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    @include to(640px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
     li {
+      @include to(640px) {
+        width: calc(100%/2);
+        padding: 3px;
+      }
       a {
-        font-size: 26px;
+        font-size: 20px;
         @include to(640px) {
           font-size: 14px;
         }
