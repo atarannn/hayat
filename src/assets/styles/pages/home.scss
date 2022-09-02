@@ -128,12 +128,6 @@
         color: $dark-gray;
         margin-right: 0.6em;
       }
-      @include to(1024px) {
-        height: 70px;
-      }
-      @include to(640px) {
-        height: 90px;
-      }
     }
   }
 }
