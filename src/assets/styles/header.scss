@@ -73,7 +73,7 @@ header {
         padding-bottom: 5px;
         @include from(1023px) {
           &::before {
-            height: 2px;
+            height: 1px;
             top: 100%;
             transform-origin: 100% 50%;
             transform: scale3d(0, 1, 1);
@@ -131,14 +131,11 @@ header {
   .tell {
     margin-right: var(--header-ofset50);
     position: relative;
-    border-bottom: 1px solid $bc;
-    padding-bottom: 2px;
     transition: all .3s ease-in-out;
     @include from(1023px) {
       &:hover {
         transition: all .3s ease-in-out;
         color: #D3A756;
-        border-bottom: 1px solid #D3A756;
       }
     }
   }

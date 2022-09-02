@@ -4,6 +4,16 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  .section-1-svg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    bottom: 0;
+    @include to(640px) {
+      bottom: -1px;
+    }
+  }
   @include to(1024px) {
     height: 60vh;
   }
@@ -120,6 +130,9 @@
       }
       @include to(1024px) {
         height: 70px;
+      }
+      @include to(640px) {
+        height: 90px;
       }
     }
   }
