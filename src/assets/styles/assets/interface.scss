@@ -29,27 +29,27 @@
 }
 
 .left-offset {
-	padding-left: var(--fields216);
+	padding-left: var(--fields120);
 }
 
 .bottom-offset {
-	margin-bottom: var(--ofset50);
+	margin-bottom: var(--ofset30);
 }
 
 .btn-style {
 	width: var(--btn-w);
 	height: var(--btn-h);
-	border-radius: 50px;
+	border-radius: 8px;
 	border: 1px solid;
-	border-color: #D3A756;
-	background: linear-gradient(92.65deg, #D3A756 0.48%, #B48D46 99.56%);
+	border-color: $bc;
+	background: $bc;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-family: 'Inter';
 	font-size: var(--btn-font);
 	line-height: 150%;
-	text-transform: none;
+	text-transform: uppercase;
 	color: $bc;
 	overflow: hidden;
 	position: relative;
@@ -97,17 +97,15 @@
 .btn-style2 {
 	width: var(--btn-w);
 	height: var(--btn-h);
-	border-radius: 50px;
-	//border: 1px solid;
-	//border-color: #D3A756;
-	background: $bc;
+	border-radius: 8px;
+	background: linear-gradient(92.65deg, #D3A756 0.48%, #B48D46 99.56%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-family: 'Inter';
 	font-size: var(--btn-font);
 	line-height: 150%;
-	text-transform: none;
+	text-transform: uppercase;
 	color: $wc;
 	overflow: hidden;
 	position: relative;
@@ -125,7 +123,7 @@
 	}
 	&:before {
 		content: '';
-		background: linear-gradient(92.65deg, #D3A756 0.48%, #B48D46 99.56%);
+		background: $bc;
 		transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 		transform-origin: 100% 50%;
 		position: absolute;
@@ -154,7 +152,7 @@
 .btn-style3 {
 	width: var(--btn-w);
 	height: var(--btn-h);
-	border-radius: 50px;
+	border-radius: 8px;
 	border: 1px solid;
 	border-color: #D3A756;
 	background: linear-gradient(92.65deg, #D3A756 0.48%, #B48D46 99.56%);
@@ -165,7 +163,7 @@
 	font-family: 'Inter';
 	font-size: var(--btn-font);
 	line-height: 150%;
-	text-transform: none;
+	text-transform: uppercase;
 	color: $bc;
 	overflow: hidden;
 	position: relative;
@@ -213,7 +211,7 @@
 .btn-style4 {
 	width: var(--btn-w);
 	height: var(--btn-h);
-	border-radius: 50px;
+	border-radius: 8px;
 	border: 1px solid;
 	border-color: #D3A756;
 	background: linear-gradient(92.65deg, #D3A756 0.48%, #B48D46 99.56%);
@@ -224,7 +222,7 @@
 	font-family: 'Inter';
 	font-size: var(--btn-font);
 	line-height: 150%;
-	text-transform: none;
+	text-transform: uppercase;
 	color: $bc;
 	overflow: hidden;
 	position: relative;
@@ -270,29 +268,25 @@
 }
 
 .normal {
-	font-family: 'Cormorat';
-	font-size: var(--font36);
+	font-family: 'tinos';
+	font-size: var(--font18);
 	font-weight: 400;
-	line-height: 130%;
+	line-height: 120%;
 	text-transform: none;
-	color: $bc;
+	color: $brown;
 }
 
 .italic {
-	font-family: 'Cormorat';
-	font-size: var(--font36);
+	font-family: 'tinos';
+	font-size: var(--font18);
 	font-weight: 400;
-	line-height: 130%;
+	line-height: 120%;
 	text-transform: none;
-	color: $bc;
-	font-style: italic;
-	position: relative;
-	border-bottom:1px solid $bc;
-	padding-bottom:1px;
+	color: #BF9850;
 }
 
 .title {
-	font-family: 'Cormorat';
+	font-family: 'Cormorant';
 	font-size: var(--title-font3);
 	font-weight: 400;
 	line-height: 100%;
@@ -301,46 +295,46 @@
 }
 
 .title2 {
-	font-family: 'Cormorat';
+	font-family: 'Cormorant';
 	font-size: var(--title-font);
 	font-weight: 400;
 	text-transform: uppercase;
-	line-height: 130%;
+	line-height: 120%;
 	color: $grey;
 }
 
 .title3 {
-	font-family: 'Cormorat';
+	font-family: 'tinos';
 	font-size: var(--title-font4);
 	font-weight: 400;
-	text-transform: none;
-	line-height: 130%;
+	line-height: 120%;
 	color: $bc;
+	text-transform: uppercase;
 }
 
 .title4 {
-	font-family: 'Cormorat';
+	font-family: 'Cormorant';
 	font-size: var(--title-font2);
 	font-weight: 400;
 	text-transform: uppercase;
-	line-height: 130%;
+	line-height: 120%;
 	color: $grey;
 }
 
 .title5 {
-	font-family: 'Cormorat';
+	font-family: 'Cormorant';
 	font-size: var(--title-font3);
 	font-weight: 400;
 	text-transform: none;
-	line-height: 130%;
+	line-height: 120%;
 	color: $bc;
 }
 
 .text {
 	font-family: 'Inter';
 	font-size: var(--font18);
-	font-weight: 300;
-	line-height: 150%;
+	font-weight: 400;
+	line-height: 140%;
 	text-transform: none;
 	color: $brown;
 }
@@ -353,7 +347,7 @@
 	position: relative;
 	@include to(1024px) {
 		flex-direction: column;
-		padding: 0 var(--fields216);
+		padding: 0 var(--fields120);
 	}
 	.col-50 {
 		width: 50%;
@@ -362,7 +356,7 @@
 		}
 	}
 	.description-left {
-		padding-left: var(--fields216);
+		padding-left: var(--fields120);
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -374,40 +368,55 @@
 		@include to(640px) {
 			margin-bottom: 30px;
 		}
-		.title {
-			margin-bottom: var(--ofset30);
-			width: 65%;
-			@include to(640px) {
-				width: 80%;
+		.description-left-top {
+			.normal {
+				font-family: 'Inter';
 			}
 		}
-		.first-info-text {
-			margin-bottom: var(--ofset30);
-			width: 65%;
+		.cormorat-36.first-info-text {
+			margin-bottom: var(--ofset20);
+			width: 70%;
 			@include to(640px) {
 				width: 100%;
 			}
-			&.normal, &.italic {
-				font-size: var(--font36);
+		}
+		.cormorat-36.first-info-text .normal {
+			font-size: var(--font36);
+			text-transform: uppercase;
+		}
+		.cormorat-36.first-info-text .italic {
+			font-size: var(--font36);
+			text-transform: uppercase;
+		}
+		.cormorat-36.second-info-text {
+			width: 70%;
+			@include to(1024px) {
+				width: 100%;
 			}
 		}
-		.second-info-text {
-			width: 100%;
-			&.normal, &.italic {
-				font-size: var(--font36);
-			}
+		.cormorat-36.second-info-text.margin-top {
+			margin-top: var(--ofset20);
+		}
+		.cormorat-36.second-info-text .normal {
+			font-size: var(--font36);
+			font-family: 'tinos';
+		}
+		.cormorat-36.second-info-text .italic {
+			font-size: var(--font36);
+			font-family: 'tinos';
 		}
 		.text {
-			width: 65%;
+			width: 70%;
 			@include to(640px) {
 				width: 100%;
 			}
 		}
 	}
 	.img-right {
-		padding-left: var(--ofset26);
 		position: relative;
 		img {
+			height: 600px;
+			object-fit: cover;
 			@include to(1024px) {
 				height: 402px;
 				object-fit: cover;
@@ -453,7 +462,7 @@
 	justify-content: space-between;
 	@include to(1024px) {
 		flex-direction: column-reverse;
-		padding: 0 var(--fields216);
+		padding: 0 var(--fields120);
 	}
 	.col-50 {
 		width: 50%;
@@ -462,23 +471,28 @@
 		}
 	}
 	.description-right {
-		padding-left: var(--ofset26);
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: flex-end;
 		justify-content: center;
+		padding-right: var(--fields120);
 		@include to(1024px) {
-			padding-left: 0;
 			margin-bottom: 50px;
+			align-items: flex-start;
 		}
-		.first-info-text {
-			margin-bottom: var(--ofset30);
+		.cormorat-36.first-info-text {
+			margin-bottom: var(--ofset20);
 			width: 70%;
 			@include to(640px) {
 				width: 100%;
 			}
-			&.normal, &.italic {
+			.normal {
 				font-size: var(--font36);
+				text-transform: uppercase;
+			}
+			.italic {
+				font-size: var(--font36);
+				text-transform: uppercase;
 			}
 		}
 		.text {
@@ -489,8 +503,9 @@
 		}
 	}
 	.img-left {
-		padding-right: var(--ofset166);
 		img {
+			height: 600px;
+			object-fit: cover;
 			@include to(1024px) {
 				height: 402px;
 				object-fit: cover;

@@ -9,19 +9,19 @@
   }
   &-text {
     text-align: center;
-    max-width: 482px;
+    max-width: 300px;
     margin-top: 15%;
+    .normal {
+      font-family: 'Inter';
+    }
     @include to(1600px) {
-      max-width: 338px;
+      max-width: 250px;
     }
     @include to(1024px) {
       margin-top: var(--ofset40);
     }
     @include to(640px) {
       max-width: 60%;
-      span {
-        font-size: 18px;
-      }
     }
   }
 }
@@ -60,9 +60,6 @@
   padding: 0 var(--fields120);
   position: relative;
 
-  @include to(1024px) {
-    padding: 0 var(--fields216);
-  }
   .bottom-swiper-nav {
     margin-top: 30px;
     display: none;
@@ -158,9 +155,9 @@
 
 .section-6 {
   .description-left {
-    justify-content: space-between;
+    justify-content: flex-start;
     &-bottom {
-      margin-top: 20px;
+      margin-top: var(--ofset20);
     }
   }
 }
@@ -179,53 +176,29 @@
 
 .section-9 {
   .btn-style2 {
-    margin-top: var(--ofset30);
+    margin-top: var(--ofset40);
+    margin-right: auto;
+    margin-left: 30%;
+    @include to(1024px) {
+      margin-left: 0;
+    }
+  }
+  .img-left {
+    img {
+      height: 890px;
+      object-fit: cover;
+      @include to(1024px) {
+        height: 402px;
+      }
+      @include to(640px) {
+        height: 210px;
+      }
+    }
   }
 }
 
 .section-10 {
   margin-bottom: var(--ofset210);
-  &-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
-    @include to(1600px) {
-      margin-bottom: 60px;
-    }
-    @include to(1024px) {
-      padding: 0 var(--fields216);
-    }
-    .contacts-btn {
-      margin-top: var(--ofset50);
-      font-family: 'Cormorat';
-      font-size: 150px;
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 130%;
-      text-align: center;
-      width: 50%;
-      color: #D3A756;
-      transition: all .3s ease-in-out;
-      @include from(1023px) {
-        &:hover {
-          cursor: pointer;
-          color: #A47A2C;
-          transition: all .3s ease-in-out;
-        }
-      }
-      @include to(1600px) {
-        font-size: 100px;
-      }
-      @include to(1024px) {
-        width: 100%;
-      }
-      @include to(640px) {
-        font-size: 58px;
-      }
-    }
-  }
   &-bottom {
     @include to(1024px) {
       flex-direction: column-reverse;
@@ -238,12 +211,12 @@
     }
     @include to(640px) {
       .description-left {
-        margin-top: 30px;
+        margin-top: var(--ofset30);
         flex-direction: column;
       }
     }
     .location {
-      margin-bottom: var(--ofset50);
+      margin-bottom: var(--ofset30);
       width: 60%;
       @include to(1024px) {
         padding-right: 10%;
@@ -252,7 +225,7 @@
       @include to(640px) {
         padding-right: 0;
         width: 80%;
-        margin-bottom: var(--ofset50);
+        margin-bottom: var(--ofset30);
       }
       .text {
         transition: all .3s ease-in-out;
@@ -270,9 +243,12 @@
         margin-top: var(--ofset20);
         pointer-events: none;
       }
+      .btn-style2 {
+        margin-top: var(--ofset20);
+      }
     }
     .tell-btn, .mail-btn {
-      margin-bottom: var(--ofset50);
+      margin-bottom: var(--ofset30);
       transition: all .3s ease-in-out;
       @include from(1023px) {
         &:hover {
@@ -317,6 +293,10 @@
   }
   @include to(640px) {
     height: 210px;
+  }
+  iframe {
+    height: 100%;
+    width: 100%;
   }
 }
 

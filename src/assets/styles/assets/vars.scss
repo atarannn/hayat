@@ -1,40 +1,40 @@
 $default-font: "Inter", sans-serif;
-$default-font2: "Cormorat", sans-serif;
+$default-font2: "tinos", sans-serif;
+$default-font3: "Cormorant", sans-serif;
 
 $wc: #fff;
 $grey: #EFEAE5;
 $dark-gray: #BABABA;
-$bc: #000;
+$bc: #1A1E21;
 $brown: #464646;
 $footer-background: #1A1E21;
 
 :root {
   --fields120: 120px;
-  --fields216: 216px;
 
   --ofset210: 210px;
-  --ofset166: 166px;
-  --ofset26: 26px;
 
   --ofset50: 50px;
   --ofset40: 40px;
   --ofset30: 30px;
   --ofset20: 20px;
-  --footer-ofset: 30px;
+  --footer-ofset: 16px;
 
   --header-h: 100px;
-  --header-ofset50: 50px;
-  --header-ofset30: 30px;
+  --header-ofset50: 40px;
+  --header-ofset30: 16px;
 
   --btn-w: 230px;
   --btn-h: 50px;
 
-  --header-footer-font: 16px;
-  --btn-font: 18px;
+  --header-footer-font: 14px;
+  --btn-font: 14px;
+
   --title-font: 200px;
   --title-font2: 172px;
   --title-font3: 74px;
   --title-font4: 36px;
+
   --font36: 36px;
   --font32: 32px;
   --font18: 18px;
@@ -44,27 +44,22 @@ $footer-background: #1A1E21;
 @media screen and (max-width: 1600px){
   :root {
     --fields120: 90px;
-    --fields216: 158px;
 
     --ofset210: 160px;
-    --ofset166: 120px;
-    --ofset26: 15px;
 
-    --ofset50: 30px;
     --ofset40: 30px;
     --ofset30: 20px;
-    --ofset20: 10px;
-    --footer-ofset: 20px;
+    --ofset20: 16px;
+    --footer-ofset: 16px;
 
-    --header-h: 80px;
-    --header-ofset50: 25px;
-    --header-ofset30: 15px;
+    --header-h: 90px;
+    --header-ofset50: 30px;
 
     --btn-w: 185px;
     --btn-h: 40px;
 
     --header-footer-font: 12px;
-    --btn-font: 14px;
+    --btn-font: 12px;
     --title-font: 140px;
     --title-font2: 124px;
     --title-font3: 54px;
@@ -79,20 +74,30 @@ $footer-background: #1A1E21;
 @media screen and (max-width: 1024px){
   :root {
     --fields120: 30px;
-    --fields216: 70px;
 
     --ofset210: 80px;
-    --ofset166: 0px;
-    --ofset26: 0px;
 
-    --footer-ofset: 15px;
+    --ofset40: 30px;
+    --ofset30: 20px;
+    --ofset20: 16px;
+    --footer-ofset: 16px;
+
+    --header-h: 90px;
+    --header-ofset50: 30px;
+
+    --btn-w: 185px;
+    --btn-h: 40px;
 
     --header-footer-font: 12px;
-    --btn-font: 14px;
+    --btn-font: 12px;
     --title-font: 100px;
+    --title-font2: 124px;
     --title-font3: 44px;
     --title-font4: 26px;
+    --font36: 24px;
     --font32: 24px;
+    --font18: 14px;
+    --font16: 12px;
   }
 }
 

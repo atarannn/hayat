@@ -2,7 +2,7 @@
   font-family: 'Inter';
   font-size: var(--header-footer-font);
   line-height: 150%;
-  text-transform: none;
+  text-transform: uppercase;
   color: $bc;
 }
 
@@ -10,8 +10,19 @@
   font-family: 'Inter';
   font-size: var(--btn-font);
   line-height: 150%;
-  text-transform: none;
+  text-transform: uppercase;
   color: $bc;
+}
+
+.youtube-btn {
+  transition: color 0.3s ease-in-out;
+  margin-right: var(--header-ofset50);
+  @include from(1023px) {
+    &:hover {
+      color: #BF9850;
+      transition: color 0.3s ease-in-out;
+    }
+  }
 }
 
 header {
@@ -62,7 +73,7 @@ header {
         padding-bottom: 5px;
         @include from(1023px) {
           &::before {
-            height: 1px;
+            height: 2px;
             top: 100%;
             transform-origin: 100% 50%;
             transform: scale3d(0, 1, 1);
@@ -70,7 +81,7 @@ header {
             content: '';
             position: absolute;
             width: 100%;
-            background: #B48D46;
+            background: $bc;
             left: 0;
             pointer-events: none;
           }
@@ -137,7 +148,7 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 50px;
+  width: 35px;
   height: 20px;
   margin-right: var(--header-ofset50);
   @include to(1600px) {
@@ -206,7 +217,6 @@ header {
 .sideform-call-mob {
   width: 50px;
   height: 50px;
-  margin-right: var(--header-ofset50);
   svg {
     width: 50px;
     height: 50px;
