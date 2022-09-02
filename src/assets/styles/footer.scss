@@ -23,6 +23,9 @@ footer {
       }
       .mask-absolute {
         text-align: left;
+        display: flex;
+        align-items: center;
+        height: 60px;
       }
     }
     @include to(1600px) {
@@ -55,7 +58,7 @@ footer {
       text-transform: none;
       color: #9AA2A7;
       text-align: left;
-      margin-top: var(--ofset20);
+      margin-top: 8px;
     }
     .form-field:not(#t) {
       background: transparent;
@@ -66,7 +69,7 @@ footer {
     }
     .btn-style3 {
       color: $wc;
-      margin-top: 70px;
+      margin-top: 40px;
     }
   }
   .footer-main {
@@ -108,6 +111,7 @@ footer {
   .footer-nav {
     li {
       margin-bottom: var(--header-ofset30);
+      line-height: 100%;
       &:last-child {
         margin-bottom: 0;
       }
@@ -126,7 +130,7 @@ footer {
       @include from(1023px) {
         &:hover {
           svg {
-            stroke: $brown;
+            stroke: #BF9850;
             transition: all .3s ease-in-out;
           }
         }
@@ -148,12 +152,12 @@ footer {
   .footer-table {
     margin-top:  var(--header-ofset30);
     pointer-events: none;
+    gap: 7px;
   }
   .footer-bottom {
     margin-top: 95px;
     justify-content: space-between;
     align-items: center;
-    padding: 0 var(--fields120);
     @include to(1024px) {
       margin-top: 80px;
     }
@@ -168,7 +172,7 @@ footer {
       text-transform: none;
       color: $dark-gray;
       @include to(640px) {
-        width: 50%;
+        width: 70%;
       }
     }
     .smarto {
