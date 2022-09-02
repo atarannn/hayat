@@ -11,7 +11,7 @@
   background: $wc;
   margin-top: var(--header-h);
   padding: 30px var(--fields120);
-  border-bottom: 1px solid #B48D46;
+  border-bottom: 1px solid $bc;
   &.active {
     visibility: visible;
     opacity: 1;
@@ -28,7 +28,7 @@
     li {
       @include to(640px) {
         width: calc(100%/2);
-        padding: 3px;
+        padding-bottom: 10px;
       }
       a {
         font-size: 20px;

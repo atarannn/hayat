@@ -232,9 +232,10 @@ header {
 .menu-mob {
   width: 50px;
   height: 50px;
-  border: 1px solid #BF9850;
+  border: 1px solid $bc;
   border-radius: 100%;
   position: relative;
+  background: $bc;
   margin-left: var(--header-ofset50);
   @include to(640px) {
     width: 40px;
@@ -270,7 +271,7 @@ header {
       content: '';
       width: 15px;
       height: 1px;
-      background: $bc;
+      background: $wc;
       transition: all 0.1s ease-in-out;
       @include to(640px) {
         width: 11px;

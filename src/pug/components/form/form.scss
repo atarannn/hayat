@@ -374,7 +374,7 @@ form {
   line-height: 150%;
   color: $wc;
   text-transform: none;
-  font-size: var(--font16);
+  font-size: 12px;
   transform: translate(0%, 100%);
 }
 [data-field-input][data-status="field--inactive"]:not(#r) {

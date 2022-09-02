@@ -153,9 +153,8 @@
 	width: var(--btn-w);
 	height: var(--btn-h);
 	border-radius: 8px;
-	border: 1px solid;
-	border-color: #D3A756;
-	background: linear-gradient(92.65deg, #D3A756 0.48%, #B48D46 99.56%);
+	border: 1px solid #BF9850;
+	background: $footer-background;
 	transition: all .3s ease-in-out;
 	display: flex;
 	align-items: center;
@@ -164,7 +163,7 @@
 	font-size: var(--btn-font);
 	line-height: 150%;
 	text-transform: uppercase;
-	color: $bc;
+	color: $wc;
 	overflow: hidden;
 	position: relative;
 	transform: translateZ(0);
@@ -181,7 +180,8 @@
 	}
 	&:before {
 		content: '';
-		background: $footer-background;
+		background: linear-gradient(92.65deg, #D3A756 0.48%, #B48D46 99.56%);
+		border: 1px solid #BF9850;
 		transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 		transform-origin: 100% 50%;
 		position: absolute;
@@ -270,7 +270,7 @@
 	font-family: 'tinos';
 	font-size: var(--font18);
 	font-weight: 400;
-	line-height: 120%;
+	line-height: 140%;
 	text-transform: none;
 	color: $brown;
 }
@@ -279,7 +279,7 @@
 	font-family: 'tinos';
 	font-size: var(--font18);
 	font-weight: 400;
-	line-height: 120%;
+	line-height: 140%;
 	text-transform: none;
 	color: #BF9850;
 }
@@ -421,7 +421,7 @@
 				object-fit: cover;
 			}
 			@include to(640px) {
-				height: 210px;
+				height: 260px;
 			}
 		}
 		.title2 {
@@ -510,7 +510,7 @@
 				object-fit: cover;
 			}
 			@include to(640px) {
-				height: 210px;
+				height: 260px;
 			}
 		}
 	}

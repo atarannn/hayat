@@ -89,11 +89,11 @@
       line-height: 150%;
       text-transform: none;
       color: $bc;
-      width: 40px;
+      width: 35px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 0 15px;
+      margin: 0 10px;
     }
     @include to(1024px) {
       display: flex;
