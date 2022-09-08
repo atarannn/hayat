@@ -15,12 +15,24 @@
 }
 
 .youtube-btn {
-  transition: color 0.3s ease-in-out;
+  background: $bc;
+  height: var(--btn-h);
+  width: var(--btn-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
   margin-right: var(--header-ofset50);
   @include from(1023px) {
     &:hover {
-      color: #BF9850;
-      transition: color 0.3s ease-in-out;
+      background: #BF9850;
+      transition: background 0.3s ease-in-out;
+    }
+  }
+  @include to(640px) {
+    svg {
+      height: 14px;
     }
   }
 }
@@ -56,7 +68,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   width: 45%;
-  .btn-style {
+  .btn-style2 {
     margin-right: var(--header-ofset50);
   }
   .nav-wrapper {
