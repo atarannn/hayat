@@ -64,10 +64,7 @@ form.forEach((form) => {
               animation: 'none',
               $field: $form.querySelector('[data-field-mail]'),
             }),
-            rule: yup
-              .string()
-              .required(i18next.t('required'))
-              .trim(),
+            rule: yup.string().email(i18next.t('validEmail')).required(i18next.t('required')).trim(),
             defaultMessage: i18next.t('mail'),
             valid: false,
             error: [],

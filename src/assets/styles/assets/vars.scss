@@ -43,7 +43,7 @@ $footer-background: #1A1E21;
 
 @media screen and (max-width: 1600px){
   :root {
-    --fields120: 90px;
+    --fields120: 60px;
 
     --ofset210: 160px;
 
@@ -53,13 +53,14 @@ $footer-background: #1A1E21;
     --footer-ofset: 16px;
 
     --header-h: 90px;
-    --header-ofset50: 30px;
+    --header-ofset50: 16px;
+    --header-ofset30: 12px;
 
-    --btn-w: 185px;
+    --btn-w: 160px;
     --btn-h: 40px;
 
-    --header-footer-font: 12px;
-    --btn-font: 12px;
+    --header-footer-font: 10px;
+    --btn-font: 10px;
     --title-font: 140px;
     --title-font2: 124px;
     --title-font3: 54px;
@@ -68,6 +69,12 @@ $footer-background: #1A1E21;
     --font32: 24px;
     --font18: 14px;
     --font16: 12px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  :root {
+    --header-footer-font: 8px;
   }
 }
 

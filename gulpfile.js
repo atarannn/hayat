@@ -13,7 +13,8 @@ const browserSync = require('browser-sync').create();
 // pug
 const pug = require('gulp-pug');
 // css
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'))
+
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
