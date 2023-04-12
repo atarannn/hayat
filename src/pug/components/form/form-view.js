@@ -60,6 +60,11 @@ const renderForm = (form, elements, toast) => {
         'send',
       );
       /*  */
+
+      window.dispatchEvent(new CustomEvent('succesFormSend', {
+        detail: elements.$form
+      }));
+
       if (elementsParamFn.successAction === 'toster') {
         toast.addToast({
           type: 'success',
